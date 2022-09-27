@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Persona } from 'src/models';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-project';
+  title = 'hola mundo from ts';
+
+  tiposDocumentos: string[] = ["Seleccione", "CC", "CE", "Registro civil"];
+
+  persona: Persona = new Persona();
+
+  cargarDatos(): void {
+    console.log("funciona");
+  }
 }

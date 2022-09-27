@@ -1,0 +1,25 @@
+<div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>nombre</th>
+          <th>tipo documento</th>
+          <th>documento</th>
+          <th>apellido</th>
+          <th>edad</th>
+          <th>¿Puede votar?</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let persona of this.listaPersonaHijo">
+        <td>{{persona.nombre}}}</td>
+        <td>{{persona.tipo_documento}}</td>
+        <td>{{persona.documento}}</td>
+        <td>{{persona.apellido}}}</td>
+        <td>{{persona.edad}}}</td>
+        <td>
+          <label *ngIf="persona.edad >= 18">Si</label>
+          <label *ngIf="persona.edad < 18">No</label>
+        </td>
+      </tr>
+    </table>
+  </div>

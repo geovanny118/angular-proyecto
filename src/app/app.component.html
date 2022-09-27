@@ -1,5 +1,3 @@
-<p>{{ title }}</p>
-
 <div align="center" id="contenedor">
   <table border>
     <tr>
@@ -44,10 +42,4 @@
   </table>
 </div>
 
-<div>
-  Tipo documento: {{this.persona.tipo_documento}}<br>
-  Documento: {{this.persona.documento}}<br>
-  Nombres: {{this.persona.nombre}}<br>
-  Apellidos: {{this.persona.apellido}}<br>
-  Edad: {{this.persona.edad}}<br>
-</div>
+<app-tabla-datos [listaPersonaHijo]="listaPersona"></app-tabla-datos>

@@ -1,0 +1,43 @@
+<div align="center" id="contenedor">
+    <table border>
+      <tr>
+        <td colspan="2" align="center">Formulario de registro</td>
+      </tr>
+      <tr>
+        <td>Tipo documento</td>
+        <td>
+          <select id="tipo-documento" [(ngModel)]="persona.tipo_documento" >
+            <option *ngFor="let tipoDocumento of tiposDocumentos" value="{{tipoDocumento}}">{{tipoDocumento}}</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Nombres</td>
+        <td>
+          <input type="text" id="nombres"  [(ngModel)]="persona.nombre">
+        </td>
+      </tr>
+      <tr>
+        <td>Apellidos</td>
+        <td>
+          <input type="text" id="apellidos"  [(ngModel)]="persona.apellido">
+        </td>
+      <tr>
+        <td>Edad</td>
+        <td>
+          <input type="text" id="edad"  [(ngModel)]="persona.edad">
+        </td>
+      </tr>
+      <tr>
+        <td>Documento</td>
+        <td>
+          <input type="text" id="documento"  [(ngModel)]="persona.documento">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="button" value="cargar datos" (click)="cargarDatos()">
+        </td>
+      </tr>
+    </table>
+  </div>

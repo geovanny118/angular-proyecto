@@ -1,23 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Persona } from 'src/models';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-formulario',
+  templateUrl: './formulario.component.html',
+  styleUrls: ['./formulario.component.css']
 })
-export class AppComponent {
+export class FormularioComponent {
+
   tiposDocumentos: string[] = ["Seleccione", "CC", "CE", "Registro civil"];
 
   persona: Persona = new Persona();
   listaPersona: Array<Persona> = [];
 
-  ngOnInit(){
-  }
-
   cargarDatos(): void {
-    // console.log("funciona");
+    console.log("funciona");
     this.listaPersona.push(this.persona);
     this.persona = new Persona();
   }
+
 }

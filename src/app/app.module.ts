@@ -10,6 +10,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MainInformationComponent } from './components/main-information/main-information.component';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
+import { FormularioComponent } from './components/formulario/formulario.component';
+import { TablaDatosComponent } from './components/tabla-datos/tabla-datos.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
     FooterComponent,
     SidebarComponent,
     MainInformationComponent,
-    NavigationBarComponent
+    NavigationBarComponent,
+    FormularioComponent,
+    TablaDatosComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,6 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
     FormsModule
   ],
   providers: [],
-  bootstrap: [DesignOneComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

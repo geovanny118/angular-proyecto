@@ -1,25 +1,30 @@
-<table style="width: 100%;" border>
+<div id="container">
+  <table style="width: 100%;">
     <tr>
-      <td align="center" colspan="2" style="background: grey;">
+      <td colspan="2">
         <app-header></app-header>
       </td>
     </tr>
     <tr>
-      <td  align="center" colspan="2">
+      <td colspan="2">
         <app-navigation-bar></app-navigation-bar>
+        <hr class="separator">
       </td>
     </tr>
     <tr>
-      <td  align="center">
+      <td width="80%" >
         <app-main-information></app-main-information>
       </td>
-      <td  align="center" style="background: grey;">
+      <td width="20%" id="td-sidebar">
         <app-sidebar></app-sidebar>
       </td>
     </tr>
     <tr>
-      <td  align="center" colspan="2">
+      <td colspan="2">
+        <hr class="separator">
         <app-footer></app-footer>
       </td>
     </tr>
-  </table>
+</table>
+</div>
+

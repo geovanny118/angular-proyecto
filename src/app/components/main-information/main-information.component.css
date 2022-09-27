@@ -1,0 +1,24 @@
+.fecha {
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    color: gray;
+}
+
+.titulo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.texto {
+    font-size: 1.8rem;
+    padding-bottom: 20px;
+}
+
+.parrafo-container {
+    background-color: #ccc;
+    padding-left: 30px;
+    /* padding-right: 30px; */
+}

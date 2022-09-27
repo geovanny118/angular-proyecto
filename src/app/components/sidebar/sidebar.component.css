@@ -1,0 +1,24 @@
+#container {
+    padding-left: 10%
+}
+
+.titulo {
+    font-size: 2.4rem;
+    font-family: 'Arial';
+    font-weight: bold;
+}
+
+#seccion {
+    padding-left: 10px;
+    padding-bottom: 40px;
+}
+
+#usuario {
+    font-family: 'Arial';
+    text-align: center;
+    font-size: 2rem;
+}
+
+.seccion-text {
+    font-size: 1.8rem;
+}

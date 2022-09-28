@@ -12,12 +12,17 @@ export class AppComponent {
   persona: Persona = new Persona();
   listaPersona: Array<Persona> = [];
 
-  ngOnInit(){
+  ngOnInit() {
   }
 
   cargarDatos(): void {
     // console.log("funciona");
     this.listaPersona.push(this.persona);
     this.persona = new Persona();
+  }
+
+  recepcionDatos(datos: Persona) {
+    console.log(datos);
+    this.persona = datos;
   }
 }

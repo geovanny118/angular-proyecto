@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Persona } from 'src/models';
 
 @Component({
@@ -11,7 +11,13 @@ export class TablaDatosComponent implements OnInit {
   constructor() { }
 
   @Input() listaPersonaHijo : Array<Persona>;
+  @Output() emitirDatos = new EventEmitter();
 
   ngOnInit(): void {
+  }
+
+  enviarDatos(datos: Persona){
+    console.log(datos);
+    this.emitirDatos.emit(datos);
   }
 }

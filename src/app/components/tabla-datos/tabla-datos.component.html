@@ -8,6 +8,7 @@
           <th>apellido</th>
           <th>edad</th>
           <th>¿Puede votar?</th>
+          <th>acciones</th>
         </tr>
       </thead>
       <tr *ngFor="let persona of this.listaPersonaHijo">
@@ -19,6 +20,9 @@
         <td>
           <label *ngIf="persona.edad >= 18">Si</label>
           <label *ngIf="persona.edad < 18">No</label>
+        </td>
+        <td>
+          <input type="button" value="editar" (click)="enviarDatos(persona)">
         </td>
       </tr>
     </table>

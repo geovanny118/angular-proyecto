@@ -42,4 +42,4 @@
   </table>
 </div>
 
-<app-tabla-datos [listaPersonaHijo]="listaPersona"></app-tabla-datos>
+<app-tabla-datos [listaPersonaHijo]="listaPersona" (emitirDatos)="recepcionDatos($event)"></app-tabla-datos>

@@ -10,13 +10,13 @@ export class TablaDatosComponent implements OnInit {
 
   constructor() { }
 
-  @Input() listaPersonaHijo : Array<Persona>;
+  @Input() listaPersonaHijo: Array<Persona>;
   @Output() emitirDatos = new EventEmitter();
 
   ngOnInit(): void {
   }
 
-  enviarDatos(datos: Persona){
+  enviarDatos(datos: Persona) {
     console.log(datos);
     this.emitirDatos.emit(datos);
   }

@@ -12,6 +12,7 @@ import { MainInformationComponent } from './components/main-information/main-inf
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { TablaDatosComponent } from './components/tabla-datos/tabla-datos.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TablaDatosComponent } from './components/tabla-datos/tabla-datos.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

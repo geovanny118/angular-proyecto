@@ -1,3 +1,4 @@
+<!--
 <div align="center" id="contenedor">
   <table border>
     <tr>
@@ -6,7 +7,7 @@
     <tr>
       <td>Tipo documento</td>
       <td>
-        <select id="tipo-documento" [(ngModel)]="persona.tipo_documento" >
+        <select id="tipo-documento" [(ngModel)]="persona.tipo_documento">
           <option *ngFor="let tipoDocumento of tiposDocumentos" value="{{tipoDocumento}}">{{tipoDocumento}}</option>
         </select>
       </td>
@@ -14,24 +15,24 @@
     <tr>
       <td>Nombres</td>
       <td>
-        <input type="text" id="nombres"  [(ngModel)]="persona.nombre">
+        <input type="text" id="nombres" [(ngModel)]="persona.nombre">
       </td>
     </tr>
     <tr>
       <td>Apellidos</td>
       <td>
-        <input type="text" id="apellidos"  [(ngModel)]="persona.apellido">
+        <input type="text" id="apellidos" [(ngModel)]="persona.apellido">
       </td>
     <tr>
       <td>Edad</td>
       <td>
-        <input type="text" id="edad"  [(ngModel)]="persona.edad">
+        <input type="text" id="edad" [(ngModel)]="persona.edad">
       </td>
     </tr>
     <tr>
       <td>Documento</td>
       <td>
-        <input type="text" id="documento"  [(ngModel)]="persona.documento">
+        <input type="text" id="documento" [(ngModel)]="persona.documento">
       </td>
     </tr>
     <tr>
@@ -41,5 +42,38 @@
     </tr>
   </table>
 </div>
-
-<app-tabla-datos [listaPersonaHijo]="listaPersona" (emitirDatos)="recepcionDatos($event)"></app-tabla-datos>
+-->
+<!--
+  <app-tabla-datos [listaPersonaHijo]="listaPersona" (emitirDatos)="recepcionDatos($event)"></app-tabla-datos>
+-->
+<input type="button" value="crear registro" (click)="crearRegistro()">
+<br/><br/>
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>nombre</th>
+        <th>tipo documento</th>
+        <th>documento</th>
+        <th>apellido</th>
+        <th>edad</th>
+        <th>¿Puede votar?</th>
+        <th>acciones</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let persona of this.listaPersona">
+      <td>{{persona.nombre}}}</td>
+      <td>{{persona.tipo_documento}}</td>
+      <td>{{persona.documento}}</td>
+      <td>{{persona.apellido}}}</td>
+      <td>{{persona.edad}}</td>
+      <td>
+        <label *ngIf="persona.edad >= 18">Si</label>
+        <label *ngIf="persona.edad < 18">No</label>
+      </td>
+      <td>
+        <input type="button" value="editar">
+      </td>
+    </tr>
+  </table>
+</div>

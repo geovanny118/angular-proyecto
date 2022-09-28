@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Persona } from 'src/models';
+import { FormularioComponent } from './components/formulario/formulario.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +14,12 @@ export class AppComponent {
   persona: Persona = new Persona();
   listaPersona: Array<Persona> = [];
 
+  
+  constructor(private _modalService: NgbModal){
+
+  }
+  
+  
   ngOnInit() {
   }
 
@@ -24,5 +32,11 @@ export class AppComponent {
   recepcionDatos(datos: Persona) {
     console.log(datos);
     this.persona = datos;
+  }
+
+  crearRegistro(){
+    const MODAL = this._modalService.open(FormularioComponent, {
+      windowClass: 'modal'
+    });
   }
 }
